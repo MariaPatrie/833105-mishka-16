@@ -1,0 +1,37 @@
+@tablet-width: 768px;
+@desktop-width: 1150px;
+
+
+@font-text: "Open-sans", "Arial", sans-serif;
+@font-title: "Open-sans bold", "Arial", sans-serif;
+
+
+@color-text: #444444; /*hsl(0, 0, 27%);*/
+@color-title: hsl(0, 0, 0);
+
+
+@color-lightblue: hsl(168, 54, 60);
+@color-white: hsl(0, 0, 100);
+
+
+@retina-dpi: 144dpi;
+@retina-dppx: 1.5dppx;
+
+
+.font (@size, @line, @weight, @spacing) {
+  font-size: @size;
+  line-height: @line;
+  font-weight: @weight;
+  letter-spacing: @spacing;
+}
+
+.background (@dir) {
+  background-image: url(@dir);
+  background-repeat: no-repeat;
+}
+
+.list-reset () {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

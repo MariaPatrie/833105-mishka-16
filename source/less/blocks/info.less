@@ -1,0 +1,98 @@
+.info {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.info__wrapper {
+  width: 260px;
+  margin: 0 auto;
+}
+
+.info__title {
+  margin-top: 25px;
+  
+  .font(15px, 20px, 700, normal);
+  color: #000000;
+}
+
+.info__list {
+  .list-reset ();
+}
+
+.info__item {
+  position: relative;
+
+  margin-bottom: 16px;
+  padding-top: 55px;
+  
+  &--eco::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 32px;
+    height: 37px;
+
+    .background("../img/icon-feature-flower.svg");
+  }
+  
+  &--style::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 47px;
+    height: 27px;
+
+    .background("../img/icon-feature-money.svg");
+  }
+  
+  &--like::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 33px;
+    height: 28px;
+
+    .background("../img/icon-feature-heart.svg");
+  }
+  
+  &--knit::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 35px;
+    height: 35px;
+
+    .background("../img/icon-feature-ball.svg");
+  }
+  
+  &--rocket::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 54px;
+    height: 23px;
+
+    .background("../img/icon-feature-rocket.svg");
+  }
+  
+  &--gift::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 33px;
+    height: 33px;
+
+    .background("../img/icon-feature-gift.svg");
+  }
+}
+
+.info__link {
+  .font(17px, 20px, 700, normal);
+  color: #000000;
+}

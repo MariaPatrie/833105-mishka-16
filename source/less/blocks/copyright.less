@@ -1,0 +1,29 @@
+.copyright {
+  min-height: 80px;
+  padding: 0 40px;
+}
+
+.copyright__text {
+  .font(18px, 18px, 700, normal);
+  color: #000000;
+  
+  &::before {
+    content: "";
+    height: 1px;
+    width: 260px;
+    background-color: #f1f1f1;
+  }
+}
+
+.copyright__link {
+  color: rgba(0, 0, 0, 1);
+
+  &:hover svg,
+  &:focus svg {
+    color: rgba(70, 193, 174, 1);
+  }
+
+  &:active svg {
+    color: rgba(70, 193, 174, 0.3);
+  }
+}

@@ -1,0 +1,52 @@
+.catalog-menu__wrapper {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.catalog-menu__list {
+  .list-reset();
+}
+
+.catalog-menu__item {
+  position: relative;
+  
+  width: 100%;
+  min-height: 103px;
+  padding: 30px;
+
+  .font(19px, 24px, 700, normal);
+  text-align: left;
+  color: #ffffff;
+
+  border-bottom: 1px solid #ececec;
+  
+  &--decoration {
+    background-color: green;
+  }
+  
+  &--decoration::before {
+    position: absolute;
+    top: 23px;
+    right: 36px;
+
+    width: 40px;
+    height: 62px;
+
+    .background("../img/icon-interior.svg");
+  }
+  
+  &--toys {
+    background-color: green;
+  }
+  
+  &--toys::before {
+    position: absolute;
+    top: 21px;
+    right: 27px;
+
+    width: 60px;
+    height: 60px;
+
+    .background("../img/icon-toy.svg");
+  }
+}
