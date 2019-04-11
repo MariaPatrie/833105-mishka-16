@@ -1,6 +1,5 @@
 .catalog-menu__wrapper {
-  width: 320px;
-  margin: 0 auto;
+
 }
 
 .catalog-menu__list {
@@ -25,6 +24,7 @@
   }
   
   &--decoration::before {
+    content: "";
     position: absolute;
     top: 23px;
     right: 36px;
@@ -36,10 +36,11 @@
   }
   
   &--toys {
-    background-color: green;
+    background-color: blue;
   }
   
   &--toys::before {
+    content: "";
     position: absolute;
     top: 21px;
     right: 27px;
@@ -49,4 +50,8 @@
 
     .background("../img/icon-toy.svg");
   }
+}
+
+.catalog-menu__link {
+  padding-right: 160px;
 }

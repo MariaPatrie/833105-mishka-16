@@ -4,14 +4,27 @@
 }
 
 .video__wrapper {
-  margin-top: 27px;
-  margin-bottom: 30px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  width: 260px;
+  border: 1px solid #ececec;
 }
 
 .video__title {
-  padding-left: 125px;
+  position: relative;
+  padding-left: 110px;
   .font(17px, 24px, 700, normal);
   color: #000000;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 30px;
+    height: 32px;
+    width: 32px;
+    .background("../img/icon-video.svg");
+  }
 }
 
 .video__play {
@@ -21,6 +34,7 @@
 }
 
 .video__text {
+  margin: 30px 0;
   padding: 0 35px;
   .font(13px, 24px, 400, normal);
   color: #444444;
