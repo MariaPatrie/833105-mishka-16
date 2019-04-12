@@ -2,3 +2,33 @@
   width: 320px;
   margin: 0 auto;
 }
+
+.popular {
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -41px;
+    height: 6px;
+    width: 100%;
+    .background("../img/bg-zigzag-line.svg");
+    background-size: cover;
+  }
+}
+
+.reviews {
+  position: relative;
+  
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    height: 6px;
+    width: 100%;
+    .background("../img/bg-zigzag-line.svg");
+    background-size: cover;
+  }
+}

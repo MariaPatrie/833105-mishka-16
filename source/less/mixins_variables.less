@@ -3,14 +3,20 @@
 
 
 @font-text: "Open-sans", "Arial", sans-serif;
-@font-title: "Open-sans bold", "Arial", sans-serif;
 
 
-.font (@size, @line, @weight, @spacing) {
+@color-white: #ffffff;
+@color-white-dark: #f1f1f1;
+@color-black: #000000;
+@color-text: #444444;
+@color-grey: #ececec;
+@color-green: #63d1bb;
+@color-green-alternative: #56c3b2;
+
+
+.font (@size, @line) {
   font-size: @size;
   line-height: @line;
-  font-weight: @weight;
-  letter-spacing: @spacing;
 }
 
 .background (@dir) {
@@ -23,3 +29,21 @@
   padding: 0;
   list-style: none;
 }
+
+/*body {
+  background: url("../img/mishka-form-mobile.jpg") no-repeat 50% 0;
+  background-size: 320px auto;
+  min-height: 750px;
+}
+@media (min-width: 768px) {
+  body {
+    background: url("../img/preview/mishka-index-tablet.jpg") no-repeat 50% 0;
+    background-size: 768px auto;
+  }
+}
+@media (min-width: 1200px) {
+  body {
+    background: url("../img/preview/mishka-index-desktop.jpg") no-repeat 50% 0;
+    background-size: 1391px auto;
+  }
+}*/

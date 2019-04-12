@@ -1,26 +1,29 @@
 .video {
   margin-top: 30px;
-  margin-bottom: 45px;
+  margin-bottom: 58px;
 }
 
 .video__wrapper {
   margin: 0 auto;
-  padding-bottom: 30px;
+  padding-bottom: 32px;
   width: 260px;
-  border: 1px solid #ececec;
+  border: 1px solid @color-grey;
 }
 
 .video__title {
   position: relative;
-  padding-left: 110px;
-  .font(17px, 24px, 700, normal);
-  color: #000000;
+  margin: 0;
+  margin-top: 23px;
+  margin-bottom: 24px;
+  padding-left: 89px;
+  .font(17px, 24px);
+  color: @color-black;
   
   &::after {
     content: "";
     position: absolute;
     top: 6px;
-    left: 30px;
+    left: 33px;
     height: 32px;
     width: 32px;
     .background("../img/icon-video.svg");
@@ -28,18 +31,19 @@
 }
 
 .video__play {
-  margin-bottom: 35px;
   height: 150px;
   width: 260px;
 }
 
 .video__text {
-  margin: 30px 0;
-  padding: 0 35px;
-  .font(13px, 24px, 400, normal);
-  color: #444444;
+  margin-top: 27px;
+  margin-bottom: 25px;
+  padding: 0 33px;
+  .font(13px, 24px);
+  font-weight: 400;
+  color: @color-text;
 }
 
 .video__order {
-  width: 190px;
+  width: 192px;
 }

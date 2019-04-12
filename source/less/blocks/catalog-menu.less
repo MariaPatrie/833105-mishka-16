@@ -13,45 +13,39 @@
   min-height: 103px;
   padding: 30px;
 
-  .font(19px, 24px, 700, normal);
+  .font(19px, 24px);
   text-align: left;
-  color: #ffffff;
+  color: @color-white;
 
-  border-bottom: 1px solid #ececec;
-  
   &--decoration {
-    background-color: green;
+    background-color: @color-green;
   }
   
-  &--decoration::before {
-    content: "";
+  &--decoration svg {
     position: absolute;
     top: 23px;
     right: 36px;
 
     width: 40px;
     height: 62px;
-
-    .background("../img/icon-interior.svg");
+    fill: #149080;
   }
   
   &--toys {
-    background-color: blue;
+    background-color: @color-green-alternative;
   }
   
-  &--toys::before {
-    content: "";
+  &--toys svg {
     position: absolute;
     top: 21px;
     right: 27px;
 
     width: 60px;
     height: 60px;
-
-    .background("../img/icon-toy.svg");
+    fill: #149080;
   }
 }
 
 .catalog-menu__link {
-  padding-right: 160px;
+  //*padding-right: 160px;*/
 }

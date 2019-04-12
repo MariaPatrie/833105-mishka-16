@@ -1,6 +1,6 @@
 .popular {
-  margin-top: 30px;
-  margin-bottom: 35px;
+  margin-top: 14px;
+  margin-bottom: 70px;
 }
 
 .popular__wrapper {
@@ -9,18 +9,25 @@
 }
 
 .popular__title {
-  .font(25px, 30px, 700, normal);
-  color: #000000;
+  margin: 0;
+  .font(25px, 30px);
+  color: @color-black;
 }
 
 .popular__new {
-  .font(17px, 20px, 700, normal);
-  color: #63d1bb;
+  margin: 0;
+  margin-top: 5px;
+  .font(17px, 20px);
+  color: @color-green;
 }
 
 .popular__text {
-  .font(15px, 20px, 400, normal);
-  color: #444444;
+  margin: 0;
+  margin-top: 23px;
+  margin-bottom: 16px;
+  .font(15px, 24px);
+  font-weight: 400;
+  color: @color-text;
 }
 
 .popular__table {
@@ -29,25 +36,34 @@
 }
 
 .table {
-  .font(15px, 20px, 400, normal);
-  color: #444444;
+  margin: 0;
+  margin-bottom: 30px;
+  width: 100%;
+  .font(15px, 20px);
+  font-weight: 400;
+  color: @color-text;
+  border-collapse: collapse;
 }
 
 .table__item {
-  min-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid @color-grey;
 }
 
 .table__field {
-  min-width: 98px;
+  width: 97px;
 }
 
 .popular__image {
-  margin-bottom: 25px;
+  margin-bottom: 21px;
 }
 
 .popular__price {
-  .font(17px, 24px, 400, normal);
-  color: #444444;
+  margin: 0;
+  margin-bottom: 25px;
+  .font(17px, 24px);
+  text-align: center;
+  color: @color-text;
 }
 
 .popular__order {

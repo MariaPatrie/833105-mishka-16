@@ -1,6 +1,6 @@
 .reviews {
-  margin-top: 30px;
-  margin-bottom: 45px;
+  margin-top: 56px;
+  margin-bottom: 86px;
 }
 
 .reviews__wrapper {
@@ -9,33 +9,40 @@
 }
 
 .reviews__title {
-  margin-bottom: 35px;
+  margin-bottom: 24px;
   
-  .font(25px, 30px, 700, normal);
-  color: #000000;
+  .font(25px, 30px);
+  color: @color-black;
 }
 
 .reviews__list {
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .reviews__item {
+  margin: 0;
   margin-bottom: 35px;
 }
 
 .reviews__text {
-  .font(15px, 30px, 400, normal);
-  color: #444444;
+  margin-bottom: 27px;
+  .font(15px, 30px);
+  font-weight: 400;
+  color: @color-text;
 }
 
 .reviews__author-name {
-  .font(17px, 24px, 700, normal);
-  color: #000000;
+  display: inline-block;
+  margin-bottom: 8px;
+  .font(17px, 24px);
+  color: @color-black;
+  font-style: normal;
 }
 
 .reviews__author-link {
-  .font(17px, 20px, 400, normal);
-  color: #444444;
+  .font(17px, 20px);
+  font-weight: 400;
+  color: @color-text;
 }
 
 .reviews__vav {
@@ -45,9 +52,19 @@
 .reviews__btn {
   min-height: 52px;
   width: 126px;
-  border: 1px solid #ececec;
+  border: 1px solid @color-grey;
   background-position: 50%;
   background-color: transparent;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+    cursor: pointer;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .reviews__prev {
@@ -56,4 +73,8 @@
 
 .reviews__next {
   .background("../img/icon-right-arrow.svg");
+}
+
+.reviews__toggles {
+  display: none;
 }
