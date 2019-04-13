@@ -1,0 +1,34 @@
+.copyright {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 40px;
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.copyright__text {
+  .font(19px, 18px);
+  color: @color-black;
+
+  &::before {
+    content: "";
+    height: 1px;
+    width: 260px;
+    background-color: @color-white-dark;
+  }
+}
+
+.copyright__link {
+  padding-top: 0;
+  border: none;
+  color: rgba(@color-black, 1);
+
+  &:hover svg,
+  &:focus svg {
+    color: rgba(#46c1ae, 1);
+  }
+
+  &:active svg {
+    color: rgba(#46c1ae, 0.3);
+  }
+}

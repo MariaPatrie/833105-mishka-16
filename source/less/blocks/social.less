@@ -1,0 +1,27 @@
+.social {
+  padding-top: 30px;
+  padding-bottom: 15px;
+}
+
+.social__list {
+  .list-reset();
+
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 180px;
+  margin: 0 auto;
+}
+
+.social__link {
+  color: rgba(@color-black, 1);
+
+  &:hover svg,
+  &:focus svg {
+    color: rgba(#46c1ae, 1);
+  }
+
+  &:active svg {
+    color: rgba(#46c1ae, 0.3);
+  }
+}
