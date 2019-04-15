@@ -42,11 +42,11 @@
   &:active::before {
     border: 2px solid rgba(@color-text, 0.3);
   }
-
+}
 
 .color__input-checkbox:checked ~ .color__input-label::after {
-  position: absolute;
   content: "";
+  position: absolute;
   top: 5px;
   left: 7px;
   width: 27px;
@@ -55,8 +55,8 @@
 }
 
 .color__input-checkbox:disabled ~ .color__input-label::before {
-  position: absolute;
   content: "";
+  position: absolute;
   top: 0;
   left: 0;
   width: 36px;
@@ -65,8 +65,8 @@
 }
 
 .color__input-checkbox:disabled:checked ~ .color__input-label::before {
-    position: absolute;
     content: "";
+    position: absolute;
     top: 0;
     left: 0;
     width: 36px;
@@ -75,8 +75,8 @@
 }
 
 .color__input-checkbox:disabled:checked ~ .color__input-label::after {
-  position: absolute;
   content: "";
+  position: absolute;
   top: 5px;
   left: 7px;
   width: 27px;

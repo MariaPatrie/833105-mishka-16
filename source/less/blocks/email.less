@@ -9,6 +9,7 @@
   &::after {
     left: 81px;
   }
+}
 
 .email__label {
   content: "";
@@ -17,9 +18,10 @@
   right: 4px;
 
   & svg {
-  width: 32px;
-  height: 32px;
-  opacity: 0.2;
+    width: 32px;
+    height: 32px;
+    opacity: 0.2;
+  }
 }
 
 .email__input:hover + .email__label svg {
@@ -42,17 +44,18 @@
   color: @color-text;
   border: none;
   box-shadow: 0 2px 0 0 @color-black;
-}
-.email__input:placeholder {
+
+  &:placeholder {
     .font(19px, 18px);
     font-weight: 400;
     color: rgba(@color-text, 0.3);
   }
 
-.email__input:hover {
+  &:hover {
     box-shadow: 0 2px 0 0 @color-green;
   }
 
-.email__input:focus {
+  &:focus {
     box-shadow: 0 2px 0 0 @color-green-alternative;
   }
+}
