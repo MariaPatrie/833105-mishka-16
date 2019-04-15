@@ -30,9 +30,37 @@
   }
 }
 
-.video__play {
+.video__production {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.video__img {
+  margin: 0 auto;
   height: 150px;
   width: 260px;
+}
+
+.video__play {
+  position: absolute;
+  top: calc(50% - 50px);
+  left: calc(50% - 38px);
+  width: 101px;
+  height: 77px;
+  .background ("../img/icon-play.svg");
+  background-position: 0 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .video__text {

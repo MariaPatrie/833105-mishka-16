@@ -16,6 +16,15 @@
   margin: 0;
   margin-bottom: 31px;
   border: 1px solid @color-grey;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
 }
 
 .catalog-item__title {
@@ -42,13 +51,11 @@
   }
 }
 
-.catalog-item__price {
+.catalog-item__price-wrapper {
   position: relative;
   margin: 0 30px;
   margin-top: 40px;
   margin-bottom: 28px;
-  .font(15px, 24px);
-  color: @color-black;
 
   &::before {
     content: "";
@@ -58,5 +65,33 @@
     height: 1px;
     width: 100%;
     background-color: @color-grey;
+  }
+}
+
+.catalog-item__price {
+  .font(15px, 24px);
+  color: @color-black;
+}
+
+.catalog-item__btn-add {
+  position: absolute;
+  top: 0px;
+  right: 0;
+  height: 19px;
+  width: 20px;
+
+  & svg {
+    opacity: 0.2;
+  }
+
+  &:hover svg,
+  &:focus svg {
+    fill: @color-green;
+    opacity: 1;
+  }
+
+  &:active svg {
+    fill: @color-green;
+    opacity: 0.3;
   }
 }

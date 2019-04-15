@@ -23,12 +23,17 @@
   border: none;
   color: rgba(@color-black, 1);
 
+  &:hover,
+  &:focus {
+    background-color: transparent;
+  }
+
   &:hover svg,
   &:focus svg {
-    color: rgba(#46c1ae, 1);
+    fill: rgba(@color-green-alternative-hover, 1);
   }
 
   &:active svg {
-    color: rgba(#46c1ae, 0.3);
+    fill: rgba(@color-green-alternative-hover, 0.3);
   }
 }

@@ -1,0 +1,37 @@
+.textarea {
+  margin-bottom: 9px;
+}
+
+.textarea__title {
+  margin-bottom: 24px;
+
+  &::after {
+    left: 62px;
+  }
+
+.textarea__field {
+  margin: 0;
+  padding: 0;
+  padding: 19px 17px;
+  width: 100%;
+  min-height: 142px;
+  .font(19px, 18px);
+  font-weight: 400;
+  color: @color-text;
+  border: 2px solid @color-text;
+  resize: none;
+
+  &:placeholder {
+    .font(19px, 18px);
+    font-weight: 400;
+    color: rgba(@color-text, 0.3);
+  }
+
+  &:placeholder:hover {
+    border: 2px solid @color-green;;
+  }
+
+  &:placeholder:focus {
+    border: 2px solid @color-green-alternative;
+  }
+}
