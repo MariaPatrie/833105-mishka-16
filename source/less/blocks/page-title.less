@@ -18,12 +18,31 @@
 
 @media (min-width: 768px) {
   .page-title {
-    padding-top: 157px;
+    margin-top: -63px;
+    padding: 0;
+    padding-top: 95px;
+    min-height: 223px;
     .font(43px, 50px);
 
     &--img {
-      min-height: 640px;
+      padding-top: 153px;
+      min-height: 744px;
       .background("../img/hero-tablet@1x.jpg");
+      background-position: 50% 0;
+    }
+  }
+}
+
+@media (min-width: 1150px) {
+  .page-title {
+    padding-top: 94px;
+    min-height: 250px;
+    .font(53px, 57px);
+
+    &--img {
+      padding-top: 153px;
+      min-height: 746px;
+      .background("../img/hero-desktop@1x.jpg");
       background-position: 50% 0;
     }
   }

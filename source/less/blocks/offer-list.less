@@ -1,0 +1,25 @@
+@media (min-width: 768px) {
+  .offer-list {
+    display: none;
+  }
+}
+
+@media (min-width: 1150px) {
+  .offer-list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 80px;
+    margin-left: 50px;
+    min-height: 68px;
+
+    &__item {
+      margin-right: 62px;
+    }
+  }
+
+  .offer-list__item a{
+    .font(15px, 24px);
+    color: @color-black;
+  }
+}

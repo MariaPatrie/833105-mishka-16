@@ -75,3 +75,87 @@
 .video__order {
   width: 192px;
 }
+
+@media (min-width: 768px) {
+  .video__wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-bottom: 45px;
+    width: 668px;
+  }
+
+  .video__production {
+    order: -1;
+  }
+
+  .video__img {
+    content: url(../img/video-tablet@1x.jpg);
+    width: 668px;
+    height: 455px;
+  }
+
+  .video__title {
+    margin-top: 4px;
+    padding-left: 106px;
+    .font(20px, 24px);
+
+    &::after {
+      top: -5px;
+      left: 41px;
+    }
+  }
+
+  .video__text {
+    margin-top: 7px;
+    margin-bottom: 36px;
+    padding: 0 40px;
+    .font(15px, 30px);
+  }
+
+  .video__order {
+    margin-left: 41px;
+    width: calc(100% - 82px);
+  }
+}
+
+@media (min-width: 1150px) {
+  .video__wrapper {
+    padding-bottom: 45px;
+    width: 1050px;
+    height: 455px;
+  }
+
+  .video__production {
+    order: -1;
+    width: 682px;
+  }
+
+  .video__img {
+    content: url(../img/video-desktop@1x.jpg);
+    width: 682px;
+    height: 453px;
+  }
+
+  .video__title {
+    padding-top: 91px;
+    padding-left: 77px;
+    padding-right: 35px;
+    width: 350px;
+
+    &::after {
+      top: 37px;
+      left: 79px;
+    }
+  }
+
+  .video__text {
+    margin-bottom: 48px;
+    padding-left: 77px;
+    width: 350px;
+  }
+
+  .video__order {
+    width: 230px;
+  }
+}

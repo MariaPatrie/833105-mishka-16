@@ -1,0 +1,40 @@
+@media (min-width: 768px) {
+  .user-list {
+    order: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-left: 150px;
+    margin-right: 50px;
+    min-height: 84px;
+
+    &__item {
+      margin-left: 20px;
+    }
+
+    &__link svg {
+      opacity: 0.2;
+    }
+
+    &__link:hover svg,
+    &__link:focus svg {
+      fill: @color-green;
+    }
+
+    &__link:active svg {
+      fill: @color-green;
+      opacity: 0.3;
+    }
+  }
+
+  .user-list__item a{
+    .font(17px, 24px);
+    color: @color-black;
+  }
+}
+
+@media (min-width: 1150px) {
+  .user-list {
+    order: 0;
+  }
+}

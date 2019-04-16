@@ -37,4 +37,34 @@
   .page-main {
     width: 768px;
   }
+
+  .popular::before {
+    bottom: -50px;
+    height: 15px;
+  }
+
+  .reviews::before {
+    bottom: -84px;
+    height: 16px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .page-main {
+    width: 1150px;
+  }
+
+  .popular::before {
+    bottom: -96px;
+    height: 24px;
+    left: 50px;
+    width: calc(100% - 100px);
+  }
+
+  .reviews::before {
+    bottom: -91px;
+    height: 24px;
+    left: 50px;
+    width: calc(100% - 100px);
+  }
 }

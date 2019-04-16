@@ -4,6 +4,7 @@
 }
 
 .popular__wrapper {
+  position: relative;
   width: 260px;
   margin: 0 auto;
 }
@@ -37,6 +38,8 @@
 
 .popular__image {
   margin-bottom: 21px;
+  width: 260px;
+  height: 315px;
 }
 
 .popular__price {
@@ -49,4 +52,129 @@
 
 .popular__order {
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .popular {
+    margin-top: 47px;
+  }
+
+  .popular__wrapper {
+    width: 668px;
+  }
+
+  .popular__title {
+    .font(43px, 50px);
+  }
+
+  .popular__new {
+    width: 128px;
+    .font(17px, 17px);
+    text-align: center;
+  }
+
+  .popular__wrapper-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .popular__wrapper-content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 478px;
+  }
+
+  .popular__text {
+    margin-top: 49px;
+    margin-bottom: 35px;
+    .font(17px, 30px);
+  }
+
+  .popular__image {
+    content: url("../img/triple-set-tablet@1x.jpg");
+    width: 334px;
+    height: 404px;
+  }
+
+  .popular__wrapper-block-table,
+  .popular__wrapper-block-img,
+  .popular__wrapper-block-price {
+    width: 50%;
+  }
+
+  .popular__wrapper-block-table{
+    padding-right: 45px;
+  }
+
+  .popular__wrapper-block-price {
+    margin-top: 25px;
+    padding-right: 45px;
+  }
+
+  .popular__price {
+    margin-bottom: 34px;
+    .font(20px, 24px);
+  }
+
+  .popular__wrapper-block-img {
+    margin-top: 49px;
+    order: 1;
+  }
+}
+
+@media (min-width: 1150px) {
+  .popular {
+    margin-top: 70px;
+  }
+
+  .popular__wrapper {
+    width: 1050px;
+  }
+
+  .popular__wrapper-title {
+    justify-content: flex-start;
+    padding-top: 52px;
+  }
+
+  .popular__title {
+    position: relative;
+    order: 1;
+    padding-left: 8px;
+    .font(53px, 57px);
+  }
+
+  .popular__new {
+    width: 163px;
+    padding: 0 46px;
+  }
+
+  .popular__wrapper-content {
+    height: 527px;
+  }
+
+  .popular__image {
+    content: url("../img/triple-set-desktop@1x.jpg");
+    width: 525px;
+    height: 636px;
+  }
+
+  .popular__wrapper-block-img {
+    margin-top: -109px;
+  }
+
+  .popular__wrapper-block-table,
+  .popular__wrapper-block-price {
+    padding-left: 174px;
+    padding-right: 58px;
+  }
+
+  .popular__text {
+    margin-bottom: 48px;
+  }
+
+  .popular__wrapper-block-price {
+    margin-top: 79px;
+  }
 }

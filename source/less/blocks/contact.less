@@ -54,3 +54,109 @@
 .contact__write {
   width: 260px;
 }
+
+@media (min-width: 768px) {
+  .contact {
+    margin-bottom: 57px;
+    width: 768px;
+  }
+
+  .contact__wrapper {
+    padding: 0 50px;
+  }
+
+  .contact__title {
+    position: relative;
+    padding-top: 60px;
+    margin-bottom: 49px;
+    .font(43px, 50px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 45px;
+      right: 3px;
+      width: 47px;
+      height: 81px;
+      .background ("../img/icon-flag.svg");
+    }
+  }
+
+  .contact__list {
+    display: flex;
+    margin-bottom: 26px;
+    .font(17px, 30px);
+  }
+
+  .contact-list__item {
+    width: 50%;
+
+    &-info {
+      margin-right: 25px;
+    }
+  }
+
+  .contact__map {
+    content: url(../img/map-tablet@1x.jpg);
+    width: 768px;
+    height: 457px;
+    margin-bottom: 52px;
+  }
+
+  .contact__write {
+    width: 230px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .contact {
+    position: relative;
+    margin-bottom: 105px;
+    padding-left: 171px;
+    width: 1050px;
+  }
+
+  .contact__wrapper {
+    padding: 0;
+  }
+
+  .contact__title {
+    padding-top: 139px;
+    margin-bottom: 49px;
+    .font(53px, 57px);
+
+    &::after {
+      top: 131px;
+      left: -108px;
+    }
+  }
+
+  .contact__list {
+    flex-direction: column;
+    margin-bottom: 48px;
+    padding-right: 525px;
+  }
+
+  .contact-list__item {
+    width: 100%;
+
+    &-info {
+      margin-right: 28px;
+    }
+  }
+
+  .contact__map {
+    content: url(../img/map-desktop@1x.jpg);
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 525px;
+    height: 457px;
+    margin-bottom: 52px;
+  }
+
+  .contact__write {
+    margin: 0;
+    margin-left: 5px;
+  }
+}

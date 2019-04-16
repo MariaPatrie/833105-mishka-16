@@ -1,0 +1,31 @@
+@media (min-width: 768px) {
+  .site-list {
+    order: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-right: 315px;
+    margin-left: 50px;
+    min-height: 68px;
+
+    &__item {
+      margin-right: 36px;
+    }
+  }
+
+  .site-list__item a{
+    .font(15px, 24px);
+    color: @color-black;
+  }
+}
+
+@media (min-width: 1150px) {
+  .site-list {
+    order: 0;
+    margin-right: 80px;
+  }
+
+  .site-list__item a{
+    .font(17px, 24px);
+  }
+}
