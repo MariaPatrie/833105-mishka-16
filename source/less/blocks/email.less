@@ -1,0 +1,61 @@
+.email {
+  position: relative;
+  margin-bottom: 34px;
+}
+
+.email__title {
+  margin-bottom: 9px;
+
+  &::after {
+    left: 81px;
+  }
+}
+
+.email__label {
+  content: "";
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+
+  & svg {
+    width: 32px;
+    height: 32px;
+    opacity: 0.2;
+  }
+}
+
+.email__input:hover + .email__label svg {
+  fill: @color-green;
+  opacity: 1;
+}
+
+.email__input:focus + .email__label svg {
+  fill: @color-green-alternative;
+  opacity: 1;
+}
+
+.email__input {
+  padding: 0;
+  padding-top: 17px;
+  padding-bottom: 13px;
+  width: 100%;
+  .font(19px, 18px);
+  font-weight: 400;
+  color: @color-text;
+  border: none;
+  box-shadow: 0 2px 0 0 @color-black;
+
+  &:placeholder {
+    .font(19px, 18px);
+    font-weight: 400;
+    color: rgba(@color-text, 0.3);
+  }
+
+  &:hover {
+    box-shadow: 0 2px 0 0 @color-green;
+  }
+
+  &:focus {
+    box-shadow: 0 2px 0 0 @color-green-alternative;
+  }
+}

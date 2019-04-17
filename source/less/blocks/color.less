@@ -1,0 +1,86 @@
+.color__title {
+  margin-bottom: 24px;
+
+  &::after {
+    left: 62px;
+  }
+}
+
+.color__list {
+  .list-reset ();
+  margin-bottom: 34px;
+}
+
+.color__item {
+  margin-bottom: 21px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.color__input-label {
+  display: block;
+  padding-top: 12px;
+  min-height: 40px;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border: 2px solid @color-text;
+  }
+
+  &:hover::before {
+    border: 2px solid @color-green;
+  }
+
+  &:active::before {
+    border: 2px solid rgba(@color-text, 0.3);
+  }
+}
+
+.color__input-checkbox:checked ~ .color__input-label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  width: 27px;
+  height: 25px;
+  .background ("../img/icon-tick.svg");
+}
+
+.color__input-checkbox:disabled ~ .color__input-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(@color-text, 0.3);
+}
+
+.color__input-checkbox:disabled:checked ~ .color__input-label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 36px;
+  height: 36px;
+  border: 2px solid rgba(@color-text, 0.3);
+}
+
+.color__input-checkbox:disabled:checked ~ .color__input-label::after {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 7px;
+  width: 27px;
+  height: 25px;
+  .background ("../img/icon-tick.svg");
+  opacity: 0.3;
+}

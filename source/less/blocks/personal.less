@@ -1,0 +1,51 @@
+.personal__title {
+  margin-bottom: 21px;
+
+  &::after {
+    left: 62px;
+  }
+}
+
+.personal__list {
+  .list-reset ();
+  margin-bottom: 10px;
+}
+
+.personal__item {
+  margin-bottom: 18px;
+
+  :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.personal__input-label {
+  padding-left: 0;
+  margin-bottom: 2px;
+}
+
+.personal__input {
+  padding: 0;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  width: 100%;
+  .font(19px, 18px);
+  font-weight: 400;
+  color: @color-text;
+  border: none;
+  box-shadow: 0 2px 0 0 @color-black;
+
+  &:placeholder {
+    .font(19px, 18px);
+    font-weight: 400;
+    color: rgba(@color-text, 0.3);
+  }
+
+  &:placeholder:hover {
+    box-shadow: 0 2px 0 0 @color-green;
+  }
+
+  &:placeholder:focus {
+    box-shadow: 0 2px 0 0 @color-green-alternative;
+  }
+}

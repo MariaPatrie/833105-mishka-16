@@ -103,3 +103,72 @@
   .font(17px, 20px);
   color: @color-black;
 }
+
+@media (min-width: 768px) {
+  .info {
+    margin-top: 100px;
+  }
+
+  .info__wrapper {
+    width: 668px;
+  }
+
+  .info__title {
+    margin-bottom: 48px;
+    .font(43px, 50px);
+  }
+
+  .info__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .info__item {
+    margin-bottom: 59px;
+    width: 50%;
+
+    &--eco {
+      order: 1;
+    }
+
+    &--style {
+      order: 3;
+    }
+
+    &--like {
+      order: 5;
+    }
+
+    &--knit {
+      order: 2;
+    }
+
+    &--rocket {
+      order: 4;
+    }
+
+    &--gift {
+      order: 6;
+    }
+  }
+
+  .info__link {
+    .font(20px, 22px);
+  }
+}
+
+@media (min-width: 1150px) {
+  .info {
+    margin-top: 155px;
+  }
+
+  .info__wrapper {
+    width: 1050px;
+    padding: 0 175px;
+  }
+
+  .info__title {
+    margin-bottom: 48px;
+    .font(53px, 57px);
+  }
+}

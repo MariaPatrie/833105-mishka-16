@@ -28,3 +28,34 @@
 
   border-bottom: 1px solid @color-grey;
 }
+
+@media (min-width: 768px) {
+  .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav__wrapper {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+    width: 768px;
+  }
+
+  .main-nav__delivery {
+    position: absolute;
+    bottom: 7px;
+    right: 50px;
+    .font(15px, 24px);
+    font-weight: 400;
+    color: @color-text;
+  }
+}
+
+@media (min-width: 1150px) {
+  .main-nav__wrapper {
+    width: 1150px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}

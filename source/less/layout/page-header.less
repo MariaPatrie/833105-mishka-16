@@ -5,3 +5,27 @@
   width: 320px;
   margin: 0 auto;
 }
+
+@media (min-width: 768px) {
+  .page-header {
+    min-height: 89px;
+    width: 768px;
+  }
+
+  .page-header__logo {
+    position: absolute;
+    top: 0;
+    left: 50px;
+  }
+}
+
+@media (min-width: 1150px) {
+  .page-header {
+    min-height: 89px;
+    width: 1150px;
+  }
+
+  .page-header__logo {
+    left: calc(50% - 74px);
+  }
+}
