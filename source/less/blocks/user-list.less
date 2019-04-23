@@ -1,3 +1,45 @@
+.user-list__link {
+  position: relative;
+  display: block;
+  padding: 45px 30px;
+  padding-left: 75px;
+  padding-bottom: 8px;
+
+  .font(17px, 24px);
+  color: @color-black;
+  text-decoration: none;
+
+  background-color: transparent;
+  border-top: 1px solid @color-grey;
+  border-bottom: 1px solid @color-grey;
+  
+  & svg {
+    position: absolute;
+    top: 45px;
+    left: 30px;
+    opacity: 0.3;
+  }
+}
+
+.user-list a[href] {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+    border-top-color: @color-grey;
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+    border-top-color: @color-grey;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+
+  .main-nav--opened .user-list__item-noactive {
+    display: none;
+  }
+}
+
 @media (min-width: @tablet-width) {
   .user-list {
     order: 1;
@@ -26,7 +68,7 @@
       opacity: 0.3;
     }
   }
-
+  
   .user-list__item a {
     .font(17px, 24px);
     color: @color-black;
