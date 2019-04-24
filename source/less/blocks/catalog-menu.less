@@ -11,7 +11,7 @@
 
   width: 100%;
   min-height: 103px;
-  padding: 30px;
+  padding: 28px 30px;
 
   .font(19px, 24px);
   text-align: left;
@@ -83,20 +83,23 @@
 }
 
 @media (min-width: @tablet-width) {
-  .catalog-menu__wrapper {
+  .catalog-menu {
     position: relative;
-    width: 668px;
 
     &::after {
       content: "";
       position: absolute;
       left: 0;
       bottom: 0;
-      height: 13px;
+      height: 14px;
       width: 100%;
       .background("../img/bg-zigzag-fill.svg");
       background-size: cover;
     }
+  }
+
+  .catalog-menu__wrapper {
+    width: 668px;
   }
 
   .catalog-menu__list {

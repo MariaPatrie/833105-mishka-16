@@ -2,6 +2,16 @@
   display: none;
 }
 
+.offer-list a[href] {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
 @media (min-width: @desktop-width) {
   .offer-list {
     display: flex;
@@ -9,7 +19,7 @@
     align-items: center;
     margin-right: 80px;
     margin-left: 50px;
-    min-height: 68px;
+    min-height: 60px;
 
     &__item {
       margin-right: 62px;

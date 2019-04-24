@@ -1,9 +1,10 @@
 .user-list__link {
   position: relative;
   display: block;
-  padding: 45px 30px;
+  padding-top: 26px;
+  padding-right: 30px;
+  padding-bottom: 28px;
   padding-left: 75px;
-  padding-bottom: 8px;
 
   .font(17px, 24px);
   color: @color-black;
@@ -11,12 +12,11 @@
 
   background-color: transparent;
   border-top: 1px solid @color-grey;
-  border-bottom: 1px solid @color-grey;
-  
+
   & svg {
     position: absolute;
-    top: 45px;
-    left: 30px;
+    top: 29px;
+    left: 31px;
     opacity: 0.3;
   }
 }
@@ -24,18 +24,17 @@
 .user-list a[href] {
   &:hover {
     color: rgba(0, 0, 0, 0.6);
-    border-top-color: @color-grey;
   }
 
   &:active {
     color: rgba(0, 0, 0, 0.3);
-    border-top-color: @color-grey;
   }
 }
 
-@media (max-width: @mobile-width-only) {
+.user-list__item {
+  min-height: 79px;
 
-  .main-nav--opened .user-list__item-noactive {
+  &-noactive {
     display: none;
   }
 }
@@ -48,35 +47,59 @@
     align-items: center;
     margin-left: 150px;
     margin-right: 50px;
-    min-height: 84px;
+    min-height: 88px;
+  }
 
-    &__item {
-      margin-left: 20px;
-    }
+  .user-list__link {
+    padding: 31px 0;
+    padding-left: 83px;
+    border-top: none;
+    /*border-left: 1px solid @color-grey;*/
 
-    &__link svg {
+    & svg {
+      top: 35px;
+      left: 33px;
       opacity: 0.2;
     }
 
-    &__link:hover svg,
-    &__link:focus svg {
+    &:hover svg,
+    &:focus svg {
       fill: @color-green;
+      opacity: 1;
     }
 
-    &__link:active svg {
+    &:active svg {
       fill: @color-green;
       opacity: 0.3;
     }
   }
-  
-  .user-list__item a {
-    .font(17px, 24px);
-    color: @color-black;
+
+  .user-list__item {
+    position: relative;
+    min-height: 88px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 1px;
+      height: 100%;
+      background-color: @color-grey;
+    }
+  }
+
+  .user-list__search span {
+    display: none;
   }
 }
 
 @media (min-width: @desktop-width) {
   .user-list {
     order: 0;
+  }
+
+  .user-list__link {
+    padding-left: 85px;
   }
 }
