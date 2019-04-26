@@ -11,20 +11,10 @@
 
   width: 100%;
   min-height: 103px;
-  padding: 30px;
 
   .font(19px, 24px);
   text-align: left;
   color: @color-white;
-
-  &:hover,
-  &:focus svg {
-    opacity: 0.7;
-  }
-
-  &:active svg {
-    opacity: 0.3;
-  }
 
   &--decoration {
     background-color: @color-green;
@@ -79,10 +69,37 @@
 
 .catalog-menu__link {
   display: block;
-  width: 120px;
+  padding: 28px 30px;
+  padding-top: 26px;
+  padding-right: 120px;
+  width: 100%;
+
+  &:hover,
+  &:focus svg {
+    opacity: 0.7;
+  }
+
+  &:active svg {
+    opacity: 0.3;
+  }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
+  .catalog-menu {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 18px;
+      width: 100%;
+      .background("../img/bg-zigzag-fill.svg");
+      background-size: cover;
+    }
+  }
+
   .catalog-menu__wrapper {
     width: 668px;
   }
@@ -92,22 +109,26 @@
   }
 
   .catalog-menu__item {
-    padding-top: 13px;
-    padding-left: 36px;
+    min-height: 120px;
     .font(20px, 30px);
 
     &--decoration svg {
-      top: 16px;
+      top: 30px;
     }
 
     &--toys svg {
-      top: 17px;
+      top: 31px;
       right: 34px;
     }
   }
+
+  .catalog-menu__link {
+    padding-top: 27px;
+    padding-left: 36px;
+  }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .catalog-menu__wrapper {
     width: 1050px;
   }
@@ -117,8 +138,6 @@
   }
 
   .catalog-menu__item {
-    padding-top: 27px;
-
     &--decoration svg {
       top: 30px;
     }
@@ -126,5 +145,10 @@
     &--toys svg {
       top: 32px;
     }
+  }
+
+  .catalog-menu__link {
+    padding-top: 27px;
+    padding-right: 310px;
   }
 }

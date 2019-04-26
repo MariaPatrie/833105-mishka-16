@@ -18,7 +18,7 @@
     position: absolute;
     left: 0;
     bottom: -41px;
-    height: 6px;
+    height: 7px;
     width: 100%;
     .background("../img/bg-zigzag-line.svg");
     background-size: cover;
@@ -33,14 +33,14 @@
     position: absolute;
     left: 0;
     bottom: -50px;
-    height: 6px;
+    height: 7px;
     width: 100%;
     .background("../img/bg-zigzag-line.svg");
     background-size: cover;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .page-main {
     width: 768px;
   }
@@ -54,7 +54,7 @@
 
   .popular::before {
     bottom: -50px;
-    height: 15px;
+    height: 16px;
   }
 
   .reviews::before {
@@ -63,28 +63,33 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .page-main {
     width: 1150px;
   }
 
   .page-main__wrapper-background {
     min-height: 746px;
+    margin-top: -60px;
     .background("../img/hero-desktop@1x.jpg");
     background-position: 50% 0;
   }
 
   .popular::before {
-    bottom: -96px;
-    height: 24px;
+    bottom: -92px;
+    height: 21px;
     left: 50px;
     width: calc(100% - 100px);
+    background-repeat: repeat;
+    background-position-x: -27px;
   }
 
   .reviews::before {
-    bottom: -91px;
-    height: 24px;
+    bottom: -88px;
+    height: 21px;
     left: 50px;
     width: calc(100% - 100px);
+    background-repeat: repeat;
+    background-position-x: -25px;
   }
 }

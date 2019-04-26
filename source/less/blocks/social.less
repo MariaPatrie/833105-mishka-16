@@ -1,6 +1,6 @@
 .social {
-  padding-top: 30px;
-  padding-bottom: 15px;
+  padding-top: 23px;
+  padding-bottom: 24px;
   border-bottom: 1px solid @color-grey;
 }
 
@@ -10,6 +10,7 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  align-items: baseline;
   width: 180px;
   margin: 0 auto;
 }
@@ -27,8 +28,9 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .social {
+    padding: 0;
     border-bottom: none;
   }
 }

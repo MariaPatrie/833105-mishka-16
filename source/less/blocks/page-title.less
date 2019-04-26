@@ -17,31 +17,46 @@
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @tablet-width) {
   .page-title {
-    margin-top: -63px;
+    margin-top: -60px;
     padding: 0;
     padding-top: 95px;
-    min-height: 223px;
+    min-height: 224px;
     .font(43px, 50px);
 
     &--index {
-      padding-top: 153px;
-      min-height: 642px;
+      padding-top: 158px;
+      min-height: 630px;
       width: 500px;
+    }
+  }
+
+  .page-title--color {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 14px;
+      width: 100%;
+      .background("../img/bg-zigzag-fill.svg");
+      background-size: cover;
     }
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .page-title {
     padding-top: 94px;
-    min-height: 250px;
+    min-height: 252px;
     .font(53px, 57px);
 
     &--index {
-      padding-top: 153px;
-      min-height: 626px;
+      padding-top: 157px;
+      min-height: 627px;
       width: 630px;
     }
   }

@@ -1,17 +1,26 @@
-@media (min-width: 768px) {
-  .offer-list {
-    display: none;
+.offer-list {
+  display: none;
+}
+
+.offer-list a[href] {
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: @desktop-width) {
   .offer-list {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    z-index: 2;
     margin-right: 80px;
     margin-left: 50px;
-    min-height: 68px;
+    min-height: 60px;
 
     &__item {
       margin-right: 62px;
