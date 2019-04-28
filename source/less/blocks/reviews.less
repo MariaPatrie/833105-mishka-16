@@ -86,6 +86,10 @@
     min-height: 457px;
     .background("../img/review@1x.jpg");
     background-size: 350px 457px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("img/review@2x.jpg");
+    }
   }
 
   .reviews__wrapper {
