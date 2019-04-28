@@ -10,7 +10,11 @@
 
     <header class="page-header">
       <a class="page-header__logo header-logo">
-        <img class="header-logo__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="header-logo__logo-image" src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+        </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -114,7 +118,11 @@
               </table>
             </div>
             <div class="popular__wrapper-block-img">
-              <img class="popular__image" src="img/triple-set-mobile@1x.jpg" width="260"   height="315" alt="Вязанные корзинки">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
+                <img class="popular__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязанные корзинки">
+              </picture>
             </div>
             <div class="popular__wrapper-block-price">
               <p class="popular__price">Цена: 990 руб.</p>
@@ -187,7 +195,11 @@
             </li>
           </ul>
         </div>
-        <img class="contact__map" src="img/map-mobile@1x.jpg" width="320" height="457" alt="Карта">
+        <picture>
+          <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
+          <img class="contact__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
+        </picture>
         <a class="contact__write button" href="#">Напишите нам</a>
       </section>
     </main>
@@ -285,6 +297,7 @@
     }
   });
 </script>
+<script src="js/picturefill.min.js"></script>
 
   </body>
 </html>
