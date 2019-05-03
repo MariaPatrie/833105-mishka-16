@@ -5,7 +5,7 @@
 
 .page-main__wrapper-background {
   min-height: 285px;
-  background-color: @color-white-dark;
+  background-color: @color-white-middle;
   .background("../img/hero-mobile@1x.jpg");
   background-position: 50% 0;
 
@@ -51,9 +51,23 @@
   }
 
   .page-main__wrapper-background {
+    position: relative;
     min-height: 744px;
     margin-top: -63px;
     background-image: url("../img/hero-tablet@1x.jpg");
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: -2;
+      margin-left: calc(50% - 50vw);
+      margin-right: calc(50% - 50vw);
+      background-color: @color-white-middle;
+    }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/hero-tablet@2x.jpg");
