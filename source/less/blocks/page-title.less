@@ -1,4 +1,5 @@
 .page-title {
+  position: relative;
   min-height: 177px;
   margin: 0;
   padding: 0 35px;
@@ -7,8 +8,25 @@
   text-align: center;
   color: @color-black;
 
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -2;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    background-color: @color-white-middle;
+  }
+
   &--color {
     background-color: @color-white-dark;
+
+    &::before {
+      background-color: @color-white-dark;
+    }
   }
 
   &--index {
@@ -38,12 +56,12 @@
     &::after {
       content: "";
       position: absolute;
-      left: 0;
+      left: -10vw;
       bottom: 0;
       height: 14px;
-      width: 100%;
-      .background("../img/bg-zigzag-fill.svg");
-      background-size: cover;
+      width: 110vw;
+      background-image: url(../img/bg-zigzag-fill.svg);
+      background-repeat: repeat;
     }
   }
 }
