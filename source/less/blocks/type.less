@@ -8,7 +8,7 @@
 
 .type__list {
   .list-reset ();
-  margin-bottom: 34px;
+  margin-bottom: 35px;
 }
 
 .type__item {
@@ -46,29 +46,7 @@
   }
 }
 
-.type__input-radio:checked ~ .type__input-label::after {
-  content: "";
-  position: absolute;
-  top: 13px;
-  left: 13px;
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: @color-green;
-}
-
-.type__input-radio:disabled ~ .type__input-label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  border: 2px solid rgba(@color-text, 0.3);
-  background-color: @color-white;
-}
-
+.type__input-radio:disabled ~ .type__input-label::before,
 .type__input-radio:disabled:checked ~ .type__input-label::before {
   content: "";
   position: absolute;
@@ -81,13 +59,68 @@
   background-color: @color-white;
 }
 
+.type__input-radio:checked ~ .type__input-label::after,
 .type__input-radio:disabled:checked ~ .type__input-label::after {
   content: "";
   position: absolute;
-  top: 12px;
-  left: 12px;
-  width: 16px;
-  height: 16px;
+  top: 13px;
+  left: 13px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
+}
+
+.type__input-radio:checked ~ .type__input-label::after {
+  background-color: @color-green;
+}
+
+.type__input-radio:disabled:checked ~ .type__input-label::after {
   background-color: rgba(@color-text, 0.3);
+}
+
+@media (min-width: @tablet-width) {
+  .type {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 55px;
+    margin-bottom: 50px;
+  }
+
+  .type__title {
+    margin: 0;
+    padding-top: 20px;
+  }
+
+  .type__list {
+    margin: 0;
+    width: 501px;
+  }
+
+  .type__item {
+    margin-bottom: 21px;
+  }
+
+  .type__input-label {
+    padding-top: 17px;
+    padding-left: 80px;
+    min-height: 55px;
+
+    &::before {
+      width: 51px;
+      height: 51px;
+    }
+  }
+
+  .type__input-radio:checked ~ .type__input-label::after {
+    top: 17px;
+    left: 17px;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .type__title {
+    padding-left: 64px;
+  }
 }

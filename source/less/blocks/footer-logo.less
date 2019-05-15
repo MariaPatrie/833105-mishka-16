@@ -12,5 +12,14 @@
     display: block;
     max-width: 102px;
     height: 34px;
+
+    &:hover,
+    &:focus {
+      fill: @color-green-alternative-hover;
+    }
+
+    &:active {
+      fill: rgba(@color-green-alternative-hover, 0.3);
+    }
   }
 }

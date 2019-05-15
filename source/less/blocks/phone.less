@@ -4,7 +4,7 @@
 }
 
 .phone__title {
-  margin-bottom: 9px;
+  margin-bottom: 0;
 
   &::after {
     left: 62px;
@@ -14,7 +14,7 @@
 .phone__label {
   content: "";
   position: absolute;
-  bottom: 11px;
+  bottom: 12px;
   right: 8px;
 
   & svg {
@@ -37,25 +37,83 @@
 .phone__input {
   padding: 0;
   padding-top: 17px;
-  padding-bottom: 13px;
+  padding-bottom: 11px;
   width: 100%;
   .font(19px, 18px);
   font-weight: 400;
   color: @color-text;
+  background-color: transparent;
   border: none;
-  box-shadow: 0 2px 0 0 @color-black;
+  border-bottom: 2px solid @color-black;
+  /*box-shadow: 0 2px 0 0 @color-black;*/
 
-  &:placeholder {
+  &::-webkit-input-placeholder {
     .font(19px, 18px);
     font-weight: 400;
-    color: rgba(@color-text, 0.3);
+    opacity: 0.3;
   }
 
-  &:placeholder:hover {
-    box-shadow: 0 2px 0 0 @color-green;
+  &::-moz-placeholder {
+    .font(19px, 18px);
+    font-weight: 400;
+    opacity: 0.3;
   }
 
-  &:placeholder:focus {
-    box-shadow: 0 2px 0 0 @color-green-alternative;
+  &::-ms-input-placeholder {
+    .font(19px, 18px);
+    font-weight: 400;
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid @color-green-input-active;
+    /*box-shadow: 0 2px 0 0 @color-green-input-active;*/
+  }
+
+  &:active {
+    border-bottom: 2px solid @color-green-input-active;
+    /*box-shadow: 0 2px 0 0 @color-green-input-active;*/
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .phone {
+    display: flex;
+    justify-content: flex-start;
+    margin: 0;
+    padding-top: 44px;
+  }
+
+  .phone__title {
+    padding-top: 23px;
+  }
+
+  .phone__label {
+    right: 76px;
+  }
+
+  .phone__input {
+    padding-right: 60px;
+    padding-left: 16px;
+    width: 501px;
+
+    &:placeholder {
+      .font(19px, 18px);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .phone__title {
+    padding-left: 62px;
+  }
+
+  .phone__input {
+    width: 700px;
+  }
+
+  .phone__label {
+    right: 233px;
   }
 }

@@ -1,10 +1,10 @@
 .email {
   position: relative;
-  margin-bottom: 34px;
+  margin-bottom: 38px;
 }
 
 .email__title {
-  margin-bottom: 9px;
+  margin-bottom: 6px;
 
   &::after {
     left: 81px;
@@ -14,7 +14,7 @@
 .email__label {
   content: "";
   position: absolute;
-  bottom: 4px;
+  bottom: 1px;
   right: 4px;
 
   & svg {
@@ -37,25 +37,85 @@
 .email__input {
   padding: 0;
   padding-top: 17px;
-  padding-bottom: 13px;
+  padding-bottom: 11px;
   width: 100%;
-  .font(19px, 18px);
+  .font(17px, 18px);
   font-weight: 400;
   color: @color-text;
+  background-color: transparent;
   border: none;
-  box-shadow: 0 2px 0 0 @color-black;
+  border-bottom: 2px solid @color-black;
+  /*box-shadow: 0 2px 0 0 @color-black;*/
 
-  &:placeholder {
+  &::-webkit-input-placeholder {
     .font(19px, 18px);
     font-weight: 400;
-    color: rgba(@color-text, 0.3);
+    opacity: 0.3;
   }
 
-  &:hover {
-    box-shadow: 0 2px 0 0 @color-green;
+  &::-moz-placeholder {
+    .font(19px, 18px);
+    font-weight: 400;
+    opacity: 0.3;
   }
 
+  &::-ms-input-placeholder {
+    .font(19px, 18px);
+    font-weight: 400;
+    opacity: 0.3;
+  }
+
+  &:hover,
   &:focus {
-    box-shadow: 0 2px 0 0 @color-green-alternative;
+    border-bottom: 2px solid @color-green-input-active;
+    /*box-shadow: 0 2px 0 0 @color-green-input-active;*/
+  }
+
+  &:active {
+    border-bottom: 2px solid @color-green-input-active;
+    /*box-shadow: 0 2px 0 0 @color-green-input-active;*/
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .email {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 20px;
+  }
+
+  .email__title {
+    padding-top: 23px;
+  }
+
+  .email__label {
+    bottom: 4px;
+    right: 71px;
+  }
+
+  .email__input {
+    padding-right: 60px;
+    padding-left: 16px;
+    width: 501px;
+    .font(19px, 18px);
+
+    &:placeholder {
+      .font(19px, 18px);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .email__title {
+    padding-top: 25px;
+    padding-left: 61px;
+  }
+
+  .email__input {
+    width: 700px;
+  }
+
+  .email__label {
+    right: 229px;
   }
 }

@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/opensansbold.woff2" as="font" crossorigin="anonymous">
     <link href="css/style.min.css" rel="stylesheet">
     <title>Mishka</title>
   </head>
@@ -69,12 +71,12 @@
           <h2 class="visually-hidden">Каталог</h2>
           <ul class="catalog-menu__list">
             <li class="catalog-menu__item catalog-menu__item--decoration">
-              <a class="catalog-menu__link">Предметы интерьера
+              <a class="catalog-menu__link" href="interior.html">Предметы интерьера
                 <svg width="40.219px" height="62.411px"><use xlink:href="#svg-icon-interior"></use></svg>
               </a>
             </li>
             <li class="catalog-menu__item catalog-menu__item--toys">
-              <a class="catalog-menu__link">Детские игрушки
+              <a class="catalog-menu__link" href="toy.html">Детские игрушки
                 <svg width="60px" height="59.62px"><use xlink:href="#svg-icon-toy"></use></svg>
               </a>
             </li>
@@ -120,7 +122,7 @@
             </div>
             <div class="popular__wrapper-block-price">
               <p class="popular__price">Цена: 990 руб.</p>
-              <a class="popular__order button" href="#">Заказать</a>
+              <a class="popular__order button button--feedback" href="#">Заказать</a>
             </div>
           </div>
         </div>
@@ -172,7 +174,7 @@
             <button class="slider__toggle" type="button">3</button>
           </p>
         </div>
-        <a class="reviews__write button" href="#">Написать</a>
+        <a class="reviews__write button" href="add_review.html">Написать</a>
       </section>
 
       <section class="contact">
@@ -189,19 +191,23 @@
             </li>
           </ul>
         </div>
-        <picture>
+        <!--<picture>
           <source media="(min-width: 1150px)" srcset="img/map-desktop@1x.jpg 1x, img/map-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)" srcset="img/map-tablet@1x.jpg 1x, img/map-tablet@2x.jpg 2x">
           <img class="contact__map" src="img/map-mobile@1x.jpg" srcset="img/map-mobile@2x.jpg 2x" alt="Карта">
-        </picture>
-        <a class="contact__write button" href="#">Напишите нам</a>
+        </picture>-->
+        <div class="contact__map">
+          <iframe class="contact__map-iframe" src="https://yandex.ru/map-widget/v1/-/CCbg6KPq" width="320" height="457" frameborder="1" allowfullscreen="true"></iframe>
+        </div>
+        <a class="contact__write button" href="write_us.html">Напишите нам</a>
       </section>
     </main>
 
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <a class="page-footer__logo footer-logo">
-          <img class="footer-logo__logo-image" src="img/logo-footer.svg" width="102" height="34" alt="Mishka">
+          <!--<img class="footer-logo__logo-image" src="img/logo-footer.svg" width="102" height="34" alt="Mishka">-->
+          <svg class="footer-logo__logo-image" width="101.615px" height="34.056px"><use xlink:href="#svg-icon-logo-footer"></use></svg>
         </a>
         <div class="page-footer__social social">
           <ul class="social__list">
@@ -224,20 +230,20 @@
         </div>
         <div class="page-footer__copyright copyright">
           <b class="copyright__text">Разработано</b>
-          <a class="button copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span>
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">HTML Academy</span>
             <svg width="26.943px" height="34.09px"><use xlink:href="#svg-icon-htmlacademy"></use></svg>
           </a>
         </div>
       </div>
     </footer>
 
-    <div class="modal">
+    <div class="modal modal--write-us">
       <div class="modal__wrapper">
         <h2 class="modal__title">Добавить в корзину</h2>
         <p class="modal__text">Выберите размер:</p>
         <form class="modal__form" action="https://echo.htmlacademy.ru" method="post">
           <ul class="modal__list">
-            <li class="modal__item">
+            <li class="modal__item modal__item--active">
               <input class="modal__input visually-hidden" type="radio" name="size" value="size_S" id="size_S">
               <label class="modal__label" for="size_S">S</label>
             </li>
@@ -254,6 +260,8 @@
         </form>
       </div>
     </div>
+
+    <div class="overlay"></div>
 
 <script src="js/script.min.js"></script>
 <script src="js/picturefill.min.js"></script>
