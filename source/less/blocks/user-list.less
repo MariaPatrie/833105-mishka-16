@@ -43,11 +43,13 @@
   .user-list {
     order: 1;
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: flex-end;
+    flex-grow: 1;
     align-items: center;
-    margin-left: 150px;
-    margin-right: 50px;
     min-height: 88px;
+    width: 638px;
   }
 
   .user-list__link {
@@ -97,6 +99,8 @@
 @media (min-width: @desktop-width) {
   .user-list {
     order: 0;
+    flex-grow: 0;
+    width: 494px;
   }
 
   .user-list__link {
