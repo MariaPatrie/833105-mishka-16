@@ -32,9 +32,7 @@
 
 .main-nav__item {
   width: 100%;
-
   text-align: left;
-
   border-bottom: 1px solid @color-grey;
 }
 
@@ -97,13 +95,17 @@
   .main-nav--nojs .user-list__item {
     display: block;
   }
+
+  .main-nav--nojs .user-list__item--noactive {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .main-nav {
     flex-direction: row;
     flex-wrap: wrap;
-	padding: 0 50px;
+    padding: 0 50px;
   }
 
   .main-nav__toggle {
@@ -131,7 +133,7 @@
 
 @media (min-width: @desktop-width) {
   .main-nav {
-	padding: 0;
+    padding: 0;
   }
 
   /*.main-nav__wrapper {
