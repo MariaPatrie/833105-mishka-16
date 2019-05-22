@@ -9,6 +9,7 @@
   right: 31px;
   z-index: 2;
   display: block;
+  padding: 0;
   width: 20px;
   height: 14px;
   background-color: transparent;
@@ -102,6 +103,7 @@
   .main-nav {
     flex-direction: row;
     flex-wrap: wrap;
+	padding: 0 50px;
   }
 
   .main-nav__toggle {
@@ -110,26 +112,28 @@
 
   .main-nav__header {
     align-self: flex-start;
-    /*margin-top: 22px;*/
+    margin-top: 21px;
     padding: 0;
     min-height: auto;
     border-bottom: none;
   }
 
   .main-nav__delivery {
-    /*position: absolute;
-    bottom: 3px;
-    right: 50px;
-    z-index: 2;*/
+    position: relative;
+    z-index: 2;
     display: block;
     order: 2;
-    padding-top: 16px;
-    width: 270px;
+    padding-top: 19px;
+    width: 268px;
     text-align: right;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .main-nav {
+	padding: 0;
+  }
+
   /*.main-nav__wrapper {
     width: 1150px;
     flex-direction: row;
@@ -138,7 +142,7 @@
   }*/
 
   .main-nav__header {
-    /*margin-top: 9px;*/
+    margin-top: 9px;
     width: 163px;
   }
 }

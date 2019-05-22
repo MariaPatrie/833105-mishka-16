@@ -1,3 +1,8 @@
+.user-list {
+  display: flex;
+  flex-direction: column;
+}
+
 .user-list__link {
   position: relative;
   display: block;
@@ -41,15 +46,14 @@
 
 @media (min-width: @tablet-width) {
   .user-list {
-    order: 1;
-    display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-end;
     flex-grow: 1;
     align-items: center;
+	padding-left: 10px;
     min-height: 88px;
-    width: 638px;
+    width: 555px;
   }
 
   .user-list__link {
@@ -100,10 +104,11 @@
   .user-list {
     order: 0;
     flex-grow: 0;
-    width: 494px;
+    width: 443px;
   }
 
   .user-list__link {
-    padding-left: 85px;
+    padding-left: 83px;
+	padding-right: 2px;
   }
 }
