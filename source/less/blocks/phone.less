@@ -11,28 +11,30 @@
   }
 }
 
-.phone__label {
+.phone__icon {
   content: "";
   position: absolute;
   bottom: 14px;
   right: 38px;
-
-  & svg {
-    width: 25px;
-    height: 24px;
-    opacity: 0.2;
-  }
+  width: 25px;
+  height: 24px;
+  opacity: 0.2;
 }
 
-.phone__input:hover + .phone__label svg {
+.phone__input:hover + .phone__icon {
   fill: @color-green;
   opacity: 1;
 }
 
-.phone__input:focus + .phone__label svg {
+.phone__input:focus + .phone__icon {
   fill: @color-green-alternative;
   opacity: 1;
 }
+
+/*.phone__input--icon {
+  .background ("../img/icon-phone.svg");
+  background-position: right 1px center;
+}*/
 
 .phone__input {
   padding: 0;
@@ -89,7 +91,7 @@
     padding-top: 23px;
   }
 
-  .phone__label {
+  .phone__icon {
     right: 76px;
   }
 
@@ -124,7 +126,7 @@
     width: 700px;
   }
 
-  .phone__label {
+  .phone__icon {
     right: 233px;
   }
 }

@@ -15,25 +15,22 @@
   }
 }
 
-.email__label {
+.email__icon {
   content: "";
   position: absolute;
   bottom: 6px;
   right: 34px;
-
-  & svg {
-    width: 32px;
-    height: 32px;
-    opacity: 0.2;
-  }
+  width: 32px;
+  height: 32px;
+  opacity: 0.2;
 }
 
-.email__input:hover + .email__label svg {
+.email__input:hover + .email__icon {
   fill: @color-green;
   opacity: 1;
 }
 
-.email__input:focus + .email__label svg {
+.email__input:focus + .email__icon {
   fill: @color-green-alternative;
   opacity: 1;
 }
@@ -92,7 +89,7 @@
     padding-top: 23px;
   }
 
-  .email__label {
+  .email__icon {
     bottom: 7px;
     right: 72px;
   }
@@ -127,7 +124,7 @@
     width: 700px;
   }
 
-  .email__label {
+  .email__icon {
     right: 229px;
   }
 }

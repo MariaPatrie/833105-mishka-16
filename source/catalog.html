@@ -15,7 +15,7 @@
     </svg>
 
     <header class="page-header container">
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <div class="main-nav__header">
           <a class="page-header__logo header-logo" href="index.html">
             <picture>
@@ -27,7 +27,7 @@
           <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         </div>
         <!--<div class="main-nav__wrapper">-->
-          <ul class="main-nav__list site-list main-nav--closed main-nav--nojs">
+          <ul class="main-nav__list site-list">
             <li class="site-list__item">
               <a>Каталог товаров</a>
             </li>
@@ -41,7 +41,7 @@
                 <svg width="17.6px" height="17.6px"><use xlink:href="#svg-icon-search"></use></svg>
               </a>
             </li>
-            <li class="user-list__item user-list__item-noactive">
+            <li class="user-list__item user-list__item--noactive">
               <a class="user-list__link user-list__login" href="login.html"><span class="visually-hidden">Войти</span></a>
             </li>
             <li class="user-list__item">
@@ -104,7 +104,7 @@
 
                   <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
-                  <img class="catalog-item__img catalog-item__img-bowl" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x"alt="Корзинка для белья">
+                  <img class="catalog-item__img catalog-item__img-bowl" src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg 2x" alt="Корзинка для белья">
                 </picture>
               </a>
               <div class="catalog-item__wrapper-desc">
@@ -162,7 +162,7 @@
               <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
               <img class="video__img" src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Процесс производства">
             </picture>
-            <a class="video__play"></a>
+            <a class="video__play"><span class="visually-hidden">показать</span></a>
           </div>
           <p class="video__text">По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.</p>
           <a class="video__order button" href="#">Сделать заказ</a>
