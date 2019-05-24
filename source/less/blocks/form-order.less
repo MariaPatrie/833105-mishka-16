@@ -1,10 +1,10 @@
 .form-order {
-  padding: 0 30px;
+  padding: 0;
 }
 
 .form-order__fieldset {
   margin: 0;
-  padding: 0;
+  padding: 0 30px;
   border: none;
   overflow: hidden;
 }
@@ -21,8 +21,8 @@
   &::after {
     content: "";
     position: absolute;
-    top: 7px;
-    width: 100%;
+    top: 8px;
+    width: 198px;
     height: 1px;
     background-color: @color-green;
   }
@@ -30,8 +30,8 @@
 
 .form-order__desc {
   margin: 21px 0;
-  margin-bottom: 25px;
-  padding: 0;
+  margin-bottom: 24px;
+  padding: 0 30px;
   .font(13px, 24px);
   font-weight: 400;
   text-align: left;
@@ -42,20 +42,97 @@
   position: relative;
   display: block;
   padding-left: 62px;
-  .font (19px, 18px);
-  color: @color-text;
+  .font (17px, 18px);
+  color: @color-black;
 }
 
 .form-order__text {
   margin: 0;
-  margin-top: 9px;
+  margin-top: 13px;
   margin-bottom: 30px;
-  padding: 0;
+  padding: 0 30px;
   .font (14px, 16px);
   font-weight: 400;
   color: @color-text;
 }
 
 .form-order__btn {
-  padding-top: 0;
+  padding: 0;
+  min-height: 53px;
+  .font (17px, 16px);
+}
+
+@media (min-width: @tablet-width) {
+  .form-order {
+    padding: 0;
+  }
+
+  .form-order__fieldset {
+    padding: 0 50px;
+  }
+
+  .form-order__fieldset--color {
+    background: @color-white-dark;
+  }
+
+  .form-order__legend {
+    width: 167px;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .form-order__desc {
+    margin-top: 74px;
+    padding: 0 50px;
+    .font(17px, 30px);
+  }
+
+  .form-order__label {
+    .font (19px, 18px);
+  }
+
+  .form-order__wrapper-phone {
+    padding-bottom: 15px;
+  }
+
+  .form-order-wrapper-btn {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 0 50px;
+    margin-top: 53px;
+  }
+
+  .form-order__btn {
+    margin: 0;
+    width: 230px;
+    min-height: 52px;
+    .font (17px, 16px);
+    font-weight: 700;
+  }
+
+  .form-order__text {
+    margin: 0;
+    margin-top: 9px;
+    padding: 0;
+    .font (17px, 30px);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-order__desc {
+    margin-top: 124px;
+    padding: 0 225px;
+  }
+
+  .form-order__legend {
+    width: 175px;
+  }
+
+  .form-order-wrapper-btn {
+    margin-top: 50px;
+    padding: 0 225px;
+  }
 }

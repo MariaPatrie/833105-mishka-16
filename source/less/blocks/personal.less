@@ -1,5 +1,9 @@
+.personal {
+  margin-bottom: 9px;
+}
+
 .personal__title {
-  margin-bottom: 21px;
+  margin-bottom: 28px;
 
   &::after {
     left: 62px;
@@ -12,7 +16,7 @@
 }
 
 .personal__item {
-  margin-bottom: 18px;
+  margin-bottom: 21px;
 
   :last-child {
     margin-bottom: 0;
@@ -26,26 +30,101 @@
 
 .personal__input {
   padding: 0;
-  padding-top: 17px;
-  padding-bottom: 17px;
+  padding-top: 15px;
+  padding-bottom: 16px;
   width: 100%;
-  .font(19px, 18px);
+  .font(17px, 18px);
   font-weight: 400;
   color: @color-text;
+  background-color: transparent;
   border: none;
-  box-shadow: 0 2px 0 0 @color-black;
+  border-bottom: 2px solid @color-black;
+  /*box-shadow: 0 2px 0 0 @color-black;*/
 
-  &:placeholder {
-    .font(19px, 18px);
+  &::-webkit-input-placeholder {
+    .font(17px, 18px);
     font-weight: 400;
-    color: rgba(@color-text, 0.3);
+    opacity: 0.3;
   }
 
-  &:placeholder:hover {
-    box-shadow: 0 2px 0 0 @color-green;
+  &::-moz-placeholder {
+    .font(17px, 18px);
+    font-weight: 400;
+    opacity: 0.3;
   }
 
-  &:placeholder:focus {
-    box-shadow: 0 2px 0 0 @color-green-alternative;
+  &::-ms-input-placeholder {
+    .font(17px, 18px);
+    font-weight: 400;
+    opacity: 0.3;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom: 2px solid @color-green-input-active;
+    /*box-shadow: 0 2px 0 0 @color-green-input-active;*/
+  }
+
+  &:active {
+    border-bottom: 2px solid @color-green-input-active;
+    /*box-shadow: 0 2px 0 0 @color-green-input-active;*/
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .personal {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 50px;
+    margin-bottom: 15px;
+  }
+
+  .personal__title {
+    margin: 0;
+    padding-top: 16px;
+  }
+
+  .personal__list {
+    width: 501px;
+  }
+
+  .personal__item {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 23px;
+  }
+
+  .personal__input-label {
+    margin: 0;
+    margin-right: 25px;
+    padding-top: 14px;
+  }
+
+  .personal__input {
+    padding-top: 9px;
+    padding-left: 17px;
+    .font(19px, 18px);
+
+    &::-webkit-input-placeholder {
+      .font(19px, 18px);
+    }
+
+    &::-moz-placeholder {
+      .font(19px, 18px);
+    }
+
+    &::-ms-input-placeholder {
+      .font(19px, 18px);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .personal__title {
+    padding-left: 61px;
+  }
+
+  .personal__list {
+    width: 700px;
   }
 }

@@ -1,3 +1,7 @@
+.color .form-order__legend::after {
+  width: 62%;
+}
+
 .color__title {
   margin-bottom: 24px;
 
@@ -8,7 +12,7 @@
 
 .color__list {
   .list-reset ();
-  margin-bottom: 34px;
+  margin-bottom: 32px;
 }
 
 .color__item {
@@ -31,7 +35,7 @@
     top: 0;
     left: 0;
     width: 40px;
-    height: 40px;
+    height: 39px;
     border: 2px solid @color-text;
   }
 
@@ -44,26 +48,7 @@
   }
 }
 
-.color__input-checkbox:checked ~ .color__input-label::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: 7px;
-  width: 27px;
-  height: 25px;
-  .background ("../img/icon-tick.svg");
-}
-
-.color__input-checkbox:disabled ~ .color__input-label::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 36px;
-  height: 36px;
-  border: 2px solid rgba(@color-text, 0.3);
-}
-
+.color__input-checkbox:disabled ~ .color__input-label::before,
 .color__input-checkbox:disabled:checked ~ .color__input-label::before {
   content: "";
   position: absolute;
@@ -74,13 +59,80 @@
   border: 2px solid rgba(@color-text, 0.3);
 }
 
+.color__input-checkbox:checked ~ .color__input-label::after,
 .color__input-checkbox:disabled:checked ~ .color__input-label::after {
   content: "";
   position: absolute;
-  top: 5px;
-  left: 7px;
+  top: 6px;
+  left: 5px;
   width: 27px;
   height: 25px;
   .background ("../img/icon-tick.svg");
+}
+
+.color__input-checkbox:disabled:checked ~ .color__input-label::after {
   opacity: 0.3;
+}
+
+@media (min-width: @tablet-width) {
+  .color {
+    position: relative;
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  .color__title {
+    margin: 0;
+    padding-top: 67px;
+  }
+
+  .color__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0;
+    padding-top: 49px;
+    padding-left: 1px;
+    padding-bottom: 24px;
+    width: 501px;
+  }
+
+  .color__item {
+    margin-bottom: 25px;
+    width: 238px;
+  }
+
+  .color__input-label {
+    padding-left: 80px;
+    padding-top: 15px;
+    min-height: 52px;
+
+    &::before {
+      width: 52px;
+      height: 52px;
+    }
+  }
+
+  .color__input-checkbox:checked ~ .color__input-label::after,
+  .color__input-checkbox:disabled:checked ~ .color__input-label::after {
+    top: 15px;
+    left: 10px;
+    width: 33px;
+    height: 23px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .color__title {
+    padding-left: 60px;
+  }
+
+  .color__list {
+    justify-content: flex-start;
+    width: 875px;
+  }
+
+  .color__item {
+    width: 263px;
+  }
 }

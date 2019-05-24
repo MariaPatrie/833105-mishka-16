@@ -6,32 +6,121 @@
   margin-bottom: 24px;
 
   &::after {
+    top: 11px;
     left: 62px;
   }
 }
 
 .textarea__field {
   margin: 0;
-  padding: 19px 17px;
+  margin-top: 24px;
+  padding: 14px 15px;
   width: 100%;
   min-height: 142px;
-  .font(19px, 18px);
+  .font(17px, 18px);
   font-weight: 400;
   color: @color-text;
+  background-color: transparent;
   border: 2px solid @color-text;
   resize: none;
 
-  &:placeholder {
+  &:-webkit-input-placeholder {
     .font(19px, 18px);
     font-weight: 400;
     color: rgba(@color-text, 0.3);
+    opacity: 0.3;
   }
 
-  &:placeholder:hover {
-    border: 2px solid @color-green;
+  &:-moz-placeholder {
+    .font(19px, 18px);
+    font-weight: 400;
+    color: rgba(@color-text, 0.3);
+    opacity: 0.3;
   }
 
-  &:placeholder:focus {
-    border: 2px solid @color-green-alternative;
+  &:-ms-input-placeholder {
+    .font(19px, 18px);
+    font-weight: 400;
+    color: rgba(@color-text, 0.3);
+    opacity: 0.3;
+  }
+
+  &:-webkit-input-placeholder:active {
+    opacity: 1;
+  }
+
+  &:-moz-placeholder:active {
+    opacity: 1;
+  }
+
+  &:-ms-input-placeholder:active {
+    opacity: 1;
+  }
+
+  &:hover,
+  &:focus {
+    border: 2px solid @color-green-input-active;
+  }
+
+  &:active {
+    border: 2px solid @color-green-input-active;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .textarea {
+    display: flex;
+    justify-content: flex-start;
+    margin: 51px auto;
+    margin-top: 27px;
+    padding: 0 50px;
+  }
+
+  .textarea__title {
+    margin: 0;
+    padding-top: 40px;
+  }
+
+  .textarea__label {
+    right: 76px;
+  }
+
+  .textarea__field {
+    padding-top: 13px;
+    width: 501px;
+    .font(19px, 18px);
+
+    &::-webkit-input-placeholder {
+      .font(19px, 18px);
+      font-weight: 400;
+      opacity: 0.3;
+    }
+
+    &::-moz-placeholder {
+      .font(19px, 18px);
+      font-weight: 400;
+      opacity: 0.3;
+    }
+
+    &::-ms-input-placeholder {
+      .font(19px, 18px);
+      font-weight: 400;
+      opacity: 0.3;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .textarea {
+    margin-bottom: 48px;
+    padding-right: 225px;
+  }
+
+  .textarea__title {
+    padding-left: 63px;
+  }
+
+  .textarea__field {
+    width: 700px;
   }
 }

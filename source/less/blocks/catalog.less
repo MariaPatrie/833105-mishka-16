@@ -1,5 +1,5 @@
 .catalog {
-  margin-top: 30px;
+  margin-top: 29px;
   margin-bottom: 30px;
 }
 
@@ -29,8 +29,8 @@
 
 .catalog-item__title {
   margin-top: 23px;
-  margin-bottom: 4px;
-  padding: 0 30px;
+  margin-bottom: 6px;
+  padding: 0 27px;
   .font(17px, 24px);
   color: @color-black;
 
@@ -45,7 +45,7 @@
 .catalog-item__description {
   margin: 0;
   margin-bottom: 24px;
-  padding: 0 30px;
+  padding: 0 27px;
   .font(13px, 30px);
   font-weight: 400;
   color: @color-text;
@@ -59,7 +59,7 @@
 }
 
 .catalog-item__img {
-  height: 195px;
+  height: 194px;
   width: 260px;
 }
 
@@ -84,6 +84,9 @@
 }
 
 .catalog-item__price {
+  margin-top: 18px;
+  margin-bottom: 12px;
+  width: 184px;
   .font(15px, 24px);
   color: @color-black;
 }
@@ -91,6 +94,7 @@
 .catalog-item__btn-add {
   height: auto;
   width: 20px;
+  padding-top: 5px;
 
   & svg {
     opacity: 0.2;
@@ -143,6 +147,7 @@
 
   .catalog-item__title {
     margin-top: 25px;
+    margin-bottom: 6px;
     padding: 0;
 
     & a {
@@ -157,12 +162,20 @@
 
   .catalog-item__price-wrapper {
     margin: 0;
+    margin-top: auto;
   }
 
   .catalog-item__price {
+    margin: 15px 0;
     padding-top: 2px;
     padding-left: 5px;
+    width: 255px;
     .font(17px, 24px);
+  }
+
+  .catalog-item__btn-add {
+    margin-right: 5px;
+    padding: 0;
   }
 }
 
@@ -213,5 +226,10 @@
 
   .catalog-item__price {
     padding-left: 0;
+    width: 235px;
+  }
+
+  .catalog-item__btn-add {
+    margin-right: 0;
   }
 }

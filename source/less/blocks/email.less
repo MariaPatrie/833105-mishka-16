@@ -1,61 +1,129 @@
 .email {
   position: relative;
-  margin-bottom: 34px;
+  margin-bottom: 33px;
 }
 
 .email__title {
-  margin-bottom: 9px;
+  margin-bottom: 6px;
 
   &::after {
     left: 81px;
+    top: 11px;
+    width: 179px;
   }
 }
 
-.email__label {
+.email__icon {
   content: "";
   position: absolute;
-  bottom: 4px;
-  right: 4px;
-
-  & svg {
-    width: 32px;
-    height: 32px;
-    opacity: 0.2;
-  }
+  bottom: 6px;
+  right: 34px;
+  width: 32px;
+  height: 32px;
+  opacity: 0.2;
 }
 
-.email__input:hover + .email__label svg {
+.email__input:hover + .email__icon {
   fill: @color-green;
   opacity: 1;
 }
 
-.email__input:focus + .email__label svg {
+.email__input:focus + .email__icon {
   fill: @color-green-alternative;
   opacity: 1;
 }
 
 .email__input {
   padding: 0;
-  padding-top: 17px;
-  padding-bottom: 13px;
+  padding-top: 21px;
+  padding-bottom: 15px;
   width: 100%;
-  .font(19px, 18px);
+  .font(17px, 18px);
   font-weight: 400;
   color: @color-text;
+  background-color: transparent;
   border: none;
-  box-shadow: 0 2px 0 0 @color-black;
+  border-bottom: 2px solid @color-black;
+  /*box-shadow: 0 2px 0 0 @color-black;*/
 
-  &:placeholder {
-    .font(19px, 18px);
+  &::-webkit-input-placeholder {
+    .font(17px, 18px);
     font-weight: 400;
-    color: rgba(@color-text, 0.3);
+    opacity: 0.3;
   }
 
-  &:hover {
-    box-shadow: 0 2px 0 0 @color-green;
+  &::-moz-placeholder {
+    .font(17px, 18px);
+    font-weight: 400;
+    opacity: 0.3;
   }
 
+  &::-ms-input-placeholder {
+    .font(17px, 18px);
+    font-weight: 400;
+    opacity: 0.3;
+  }
+
+  &:hover,
   &:focus {
-    box-shadow: 0 2px 0 0 @color-green-alternative;
+    border-bottom: 2px solid @color-green-input-active;
+    /*box-shadow: 0 2px 0 0 @color-green-input-active;*/
+  }
+
+  &:active {
+    border-bottom: 2px solid @color-green-input-active;
+    /*box-shadow: 0 2px 0 0 @color-green-input-active;*/
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .email {
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 17px;
+  }
+
+  .email__title {
+    padding-top: 23px;
+  }
+
+  .email__icon {
+    bottom: 9px;
+    right: 72px;
+  }
+
+  .email__input {
+    padding-right: 60px;
+    padding-top: 17px;
+    padding-left: 16px;
+    width: 501px;
+    .font(19px, 18px);
+
+    &::-webkit-input-placeholder {
+      .font(19px, 18px);
+    }
+
+    &::-moz-placeholder {
+      .font(19px, 18px);
+    }
+
+    &::-ms-input-placeholder {
+      .font(19px, 18px);
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .email__title {
+    padding-top: 25px;
+    padding-left: 61px;
+  }
+
+  .email__input {
+    width: 700px;
+  }
+
+  .email__icon {
+    right: 229px;
   }
 }
