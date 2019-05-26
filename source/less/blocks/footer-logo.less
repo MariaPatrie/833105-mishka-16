@@ -12,14 +12,14 @@
     display: block;
     max-width: 102px;
     height: 34px;
+  }
 
-    &:hover,
-    &:focus {
-      fill: @color-green-alternative-hover;
-    }
+  .footer-logo:hover .footer-logo__logo-image,
+  .footer-logo:focus .footer-logo__logo-image {
+    fill: @color-green-alternative-hover;
+  }
 
-    &:active {
-      fill: rgba(@color-green-alternative-hover, 0.3);
-    }
+  .footer-logo:active .footer-logo__logo-image {
+    fill: rgba(@color-green-alternative-hover, 0.3);
   }
 }

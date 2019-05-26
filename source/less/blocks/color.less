@@ -38,14 +38,15 @@
     height: 39px;
     border: 2px solid @color-text;
   }
+}
 
-  &:hover::before {
-    border: 2px solid @color-green;
-  }
+.color__input-checkbox:hover+label::before,
+.color__input-checkbox:focus+label::before {
+  border: 2px solid @color-green;
+}
 
-  &:active::before {
-    border: 2px solid rgba(@color-text, 0.3);
-  }
+.color__input-checkbox:active+label::before {
+  border: 2px solid rgba(@color-text, 0.3);
 }
 
 .color__input-checkbox:disabled ~ .color__input-label::before,
